@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<img  src="{{url_for('static',filename='rna.jpeg')}}" align="middle" style="width:80%;height:300px;display: block;margin-left: auto;margin-right: auto">
+
+<div style="background-color:#E5FFE5;width:100%;height:auto">
+<div style="margin:50px;padding:10px"> 
+<h2 align="middle" style="color:#4c7d4c">FSE-ACP: Feature Subspacing Ensemble Classifier for Anti Cancer Peptide Prediction</h2>
+<h1>Abstract</h1>
+<p>Anticancer peptides have emerged as new effective method for treatment of cancer due to their high precision. 
+As they are not toxic to normal cells they are preferred over traditional methods and therapy and hence discovery 
+of anticancer peptides has found importance among biologists. However, the laboratory methods are still time consuming 
+and cost-ineffective. In this project, we create a tool and propose a novel ensemble classification algorithm to 
+predict anticancer property of peptides based on their primary amino acid sequences. Our ensemble divides the feature 
+space into subspaces and thus each weak classifiers based on the subspaces and provides the final prediction using 
+majority voting. We have tested the performance of the method on standard benchmark dataset. Our method is significantly 
+better than most other state-of-the-art methods for anticancer peptide prediction. FSE-ACP is readily available for use from
+<a href="http://irecspot.pythonanywhere.com/server" target="_blank">http://irecspot.pythonanywhere.com/server</a>.</p>
+</div>
+</div>
+{% endblock %}

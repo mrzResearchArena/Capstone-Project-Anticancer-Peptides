@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h2 style="color:mediumvioletred">Benchmark Dataset</h2>
+For the Benchmark Dataset download from below:<br/>
+<a href="{{url_for('static',filename='ACP500.txt')}}" download="ACP500 Dataset">Download ACP500 Data</a>
+<br/>
+<a href="{{url_for('static',filename='ACP164.txt')}}" download="ACP164 Dataset">Download ACP164 Data</a>
+
+
+
+<!--<h2 style="color:mediumvioletred">Supporting Informations:</h2>
+    Supporting Information (#1): <a href="{{url_for('static',filename='info_1.pdf')}}" download="Information 1">Information 1</a>
+    <br/>
+    (Features observation, and Probability calculation among features)
+    <br/><br/>
+    Supporting Information (#2): <a href="{{url_for('static',filename='info_2.pdf')}}" download="Information 2">Information 2</a>
+    <br/>
+    (Details description of (l, k, p)-mers Composition)
+
+<h2 style="color:mediumvioletred">Details code:</h2>
+    GitHub Link: <a href="https://github.com/mrzResearchArena/iRecSpot" target="_blank">https://github.com/mrzResearchArena/iRecSpot</a>
+-->
+{% endblock %}

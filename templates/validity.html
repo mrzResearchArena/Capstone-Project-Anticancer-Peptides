@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>All FASTAS are not valid</h1>
+<p>Please go back and input valid fasta</p>
+<table class='table'>
+  <th>
+    <td><h4>Fasta</h4></td>
+    <td><h4>Validity</h4></td>
+  </th>
+{% for i in range(0,nameFASTA|length) %}
+    <tr>
+      <td>{{loop.index}}</td>
+       <td>{{nameFASTA[i]}}</td>
+        {% if Verdict[i] == "Invalid FASTA"%}
+          <td style="color:#DC143C"><strong>{{Verdict[i]}}</strong></td>
+        {% else %}
+          <td style="color:#228B22"><strong>{{Verdict[i]}}</strong></td>
+        {% endif %}
+      </tr>
+{% endfor %}
+
+</table>
+{% endblock %}

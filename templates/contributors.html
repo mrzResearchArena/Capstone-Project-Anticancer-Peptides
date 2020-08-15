@@ -1,0 +1,144 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<style>
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color:#f4fef4;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+
+</style>
+<h1>Contributors</h1>
+<div class="row">
+  <div class="column">
+    <div class="card" >
+	  <div align="center">
+        <img src = "{{url_for('static',filename='jony.jpg')}}"  style="width:50%;">
+	  </div>
+      <div class="container">
+        <h2>H.M. Fazlul Haque</h2>
+        <p class="title">Undergraduate Student</p>
+        <p>Department of Computer Science and Engineering</p>
+        <p>United International University, Bangladesh</p>
+        <p>Contact: fazlulhaquue.jony@gmail.com </p>
+      </div>
+    </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+	  <div align="center">
+        <img src = "{{url_for('static',filename='fariha.jpg')}}" style="width:50%; ">
+	  </div>
+      <div class="container">
+        <h2>Fariha Arifin</h2>
+        <p class="title">Undergraduate Student</p>
+        <p>Department of Computer Science and Engineering</p>
+        <p>United International University, Bangladesh</p>
+        <p>Contact: farihaarifin@gmail.com </p>
+      </div>
+    </div>
+  </div>
+ 
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div align="center">
+        <img src = "{{url_for('static',filename='mouri.png')}}" style="width:45%; ">
+	  </div>
+      <div class="container">
+        <h2>Fatima Islam Mouri</h2>
+        <p class="title">Undergraduate Student</p>
+        <p>Department of Computer Science and Engineering</p>
+        <p>United International University, Bangladesh</p>
+        <p>Contact: fmouri151108@bscse.uiu.ac.bd </p>
+      </div>
+    </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div align="center">
+        <img src = "{{url_for('static',filename='tushar.jpg')}}" style="width:50%; ">
+	  </div>
+      <div class="container">
+        <h2>Kamrul Islam Tushar</h2>
+        <p class="title">Undergraduate Student</p>
+        <p>Department of Computer Science and Engineering</p>
+        <p>United International University, Bangladesh</p>
+        <p>Contact: ki.tushar21@gmail.com </p>
+      </div>
+    </div>
+  </div>  
+  
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div align="center">
+        <img src = "{{url_for('static',filename='rana.png')}}" style="width:30%; ">
+	  </div>
+      <div class="container">
+        <h2>Rana Kumar Ghosh</h2>
+        <p class="title">Undergraduate Student</p>
+        <p>Department of Computer Science and Engineering</p>
+        <p>United International University, Bangladesh</p>
+        <p>Contact: ranaghosh169@gmail.com </p>
+      </div>
+    </div>
+  </div> 
+  
+<div class="row">
+  <div class="column">
+    <div class="card">
+	<div align="center">
+        <img src = "{{url_for('static',filename='DrSwakkhar.jpg')}}" style="width:50%; ">
+	  </div>
+      <div class="container">
+        <h2>Dr. Swakkhar Shatabda</h2>
+        <p class="title">Associate Professor & Undergraduate Program Coordinator</p>
+        <p>Department of Computer Science and Engineering</p>
+        <p>United International University, Bangladesh</p>
+        <p>Contact: swakkhar@cse.uiu.ac.bd </p>
+      </div>
+    </div>
+</div>            
+{% endblock %}

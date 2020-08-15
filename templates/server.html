@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="row" style="min-width:1130px;">
+<div class="col-xs-8 " >
+<div class="container" >
+<h3>Enter the query sequences in <span style="color:#4c7d4c">FASTA</span> format : </h3>
+<form method="post" action="/send" name="calculate">
+    <div class="form-group" align="left">
+        <textarea name="fasta" cols="80" rows="10" style="background-color:#ffffff" maxlength="1024"></textarea>
+        <p style="color:#DC143C">Recomended browser : Google Chrome or Mozilla Firefox</p>
+        <label>Enter Step Size: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="number" name="step" value="250" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3" min="200" max="550">
+    </div>
+
+    <div class="btn-toolbat" >
+        <input class="btn btn-primary btn-lg" type="submit" name = "submit" value="Submit" style="background-color: #4c7d4c">
+        <input class="btn btn-primary btn-lg" type="reset" value=" Reset " style="background-color: #4c7d4c">
+        <input class="btn btn-primary btn-lg" type="button" value="Example" onClick="process()" style="background-color: #4c7d4c">
+    </div>
+</form>
+</div>
+</div>
+<script type="text/javascript">
+<!---->
+function process(){
+	var ma = ">AVDFSSCARMDVPGLSKVAQGLCISSCKFQNCGTGHCEKRGGRPTCVCDRCGRGGGEWPSVPMPKGRSSRGRRHS\n\
+>GEILCNLCTGLINTLENLLTTKGADKVKDYISSLCNKASGFIATLCTKVLDFGIDKLIQLIEDKVDANAICAKIHAC";
+	document.calculate.fasta.value = ma;
+}
+</script>
+<div class="col-xs-4 " >
+<div class="jumbotron text-left" >
+  <h3 style="color:#DC143C">User Guidelines</h3>
+  <ol >
+    <!--<li >Recommended browser : Google Chrome or Mozilla Firefox</li>-->
+    <li >Maximum number of characters is 1024</li>
+    <li >User can give multiple FASTA format peptide sequences (click on the Example button for example) but maximum number of characters should not exceed 1024</li>
+    <li >Click on the Example button for example</li>
+    <li >Click on the Reset button to reset</li>
+    <li >Click on the Submit button to get the prediction results</li>
+    <li >If a FASTA format is not valid, it will not give any prediction </li>
+    <li >Case-insensitive : does not distinguish between lower case letter or upper case letter. (E.g. ACGT, acgt, AcGt have the similar meaning)</li>
+    <li >Must use FASTA format for the peptide sequences</li>
+    <li >Each FASTA format peptide sequence must start in a new line</li>
+    <!--<li >For more about FASTA format visit </li>
+    <li >A FASTA format DNA sequnce is given below (user can copy and paste it in the textarea)</li>
+     <form method="get" action="file.doc">
+   <button type="submit"><a href="http://bioinformatics.hitsz.edu.cn/iRSpot-EL/static/download/Benchmark%20dataset.pdf" target="_blank">Download</a></button>
+</form> -->
+  </ol>
+  <!--<h4>Example of a Fasta format:</h4>
+  <P style="background-color:white ;padding: .5cm;width:auto">>AVDFSSCARMDVPGLSKVAQGLCISSCKFQNCGTGHCEKRGGRPTCVCDRCGRGGG
+EWPSVPMPKGRSSRGRRHS</p>-->
+</div>
+</div>
+</div>
+{% endblock %}

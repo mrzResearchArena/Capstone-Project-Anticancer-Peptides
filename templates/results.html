@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>Results</h1>
+<table class='table'>
+{% for i in range(0,nameFASTA|length)%}
+    <tr>
+    <td colspan="5" align="center"><h4 style="color:mediumvioletred">FASTA: {{nameFASTA[i]}}</h4></td>
+    <tr/>
+    <th>
+      <td><h4>Position</h4></td>
+      <td><h4>Predicted Type</h4></td>
+      <td><h4>Probability</h4></td>
+      <td><h4>Sequence Details</h4></td>
+    </th>
+    {% for j in SequencesNumber[i]%}
+    <tr>
+        <td>{{loop.index}}</td>
+        <td>
+          {% for m in range(0, j|length) %}
+            {% if m == 0 %}
+              {{j[m]}} -
+            {%  else %}
+              {{j[m]}}
+            {% endif %}
+          {% endfor %}
+        </td>
+
+        {% if Types[i][loop.index-1] == 'hotspot'%}
+          <td style="color:#DC143C">{{Types[i][loop.index-1]}}</td>
+        {% elif Types[i][loop.index-1] == 'coldspot'%}
+          <td style="color:#0000FF">{{Types[i][loop.index-1]}}</td>
+        {% else %}
+          <td>{{Types[i][loop.index-1]}}</td>
+        {% endif %}
+        <td>{{Probabilities[i][loop.index-1]}}</td>
+        <td> <form method="post" action="/trap">
+            <input class="btn" type="submit" name = "submit" value="Sequence Details">
+            <textarea name="da" style="display:None">{{Sequences[i][loop.index-1]}}</textarea>
+            </form></td>
+      </tr>
+      {% endfor %}
+{% endfor %}
+</table>
+{% endblock %}

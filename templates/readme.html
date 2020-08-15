@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>Read Me</h1>
+<h3>Step 1</h3>
+<p>Open the web server by clicking the link at <a href="http://irecspot.pythonanywhere.com/" target="_blank">http://irecspot.pythonanywhere.com/</a>.You will see the homepage.</p>
+
+<h3>Step 2</h3>
+<p>Click on the Server button on the top menu or go to this link <a href="http://irecspot.pythonanywhere.com/server" target="_blank">http://irecspot.pythonanywhere.com/server</a>. You will see the server page.</p>
+
+<h3>Step 3</h3>
+<p>Once in the server page, either type or copy and paste the query DNA sequence into the input box. The input sequence should be in the FASTA format.
+A sequence in FASTA format consists of a single initial line beginning with the symbol ">"" in the first column, followed
+by lines of sequence data in which nucleotides or amino acids are represented using single-letter codes. Except for the mandatory symbol ">", all the other characters in the single initial line are optional and only used for the purpose of identification and description. The sequence ends if another line starting with the symbol ">" appears; this indicates the start of another sequence. Example sequences in FASTA format can be seen by clicking on the Example button right above the input box.</p>
+
+<h3>Step 4</h3>
+<p>Users are able to set the step size of iRecSpot-EF. The predictor predicts the type(hotspot, coldspot or none) in each subsequnce according to the stepsize. Example: if sequnce length is 600 and step size given is 200, then the model will predict from the position 1 to 200 of the sequnce whether it is hotspot, coldspot or none. Then it will do the same thing for the position 201 to 400 and the position 301 to 600.</p>
+
+<h3>Step 5</h3>
+<p>Click on the Submit button to see the predicted results.</p>
+<br/>
+<strong>Note that,</strong> "None" type is given when the subsequnce has the probability is less than 75% of either being hotspot or coldspot.
+{% endblock %}
