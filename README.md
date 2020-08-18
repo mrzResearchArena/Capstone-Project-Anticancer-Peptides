@@ -1,5 +1,7 @@
-# Python-based-Flask-Framework-website-with-Machine-Learning-Model
-Back-end  python, Front-end HTML, CSS, JavaScript, Bootstrap. Framework : Flask. Runs Machine learning model with great visual of ouput.
+# A Python-based web server for the Anticancer Peptides
+- Back-end:  Python
+- Front-end: HTML, CSS, JavaScript, Bootstrap
+- Framework: Flask
 
 ### Installation Process :
     Install Flask: 
