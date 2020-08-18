@@ -25,7 +25,7 @@ example: pip install sklearn
 or, We can download from anaconda cloud.
 ```
 
-### Code Description (App):
+### Running Process (App):
 ```console
 user@machine:~$ python app.py
 ```
